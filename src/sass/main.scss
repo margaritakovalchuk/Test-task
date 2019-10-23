@@ -1,6 +1,6 @@
 @import "variables.scss";
 @import "fonts.scss";
-@import "Mixins.scss";
+@import "mixins.scss";
 
 a:hover {
   text-decoration: none;
@@ -121,8 +121,8 @@ li {
 
 .content--title {
   font-family: "Mplus1p-Black", Arial, sans-serif;
-  font-size: 99px;
-  line-height: 118.8%;
+  font-size: 80px;
+  line-height: 1.2;
 
   .pink {
     color: $complementary-color;
@@ -155,6 +155,13 @@ li {
   background-color: #ffffff;
 }
 
+.intro-wrapper {
+  width: calc((100% - 128px) / 2);
+  margin-right: 128px;
+}
+.wrapper {
+  width: calc((100% - 128px) / 2);
+}
 .subheading {
   @include category();
 }
@@ -182,6 +189,36 @@ li {
   }
 }
 
+.blockquote--block {
+  font-family: "NoticiaText-Italic", sans-serif;
+  font-size: 22.5px;
+  line-height: 177.4%;
+  background-color: $main-color;
+  color: $main-text-color;
+  //padding-left: 64px;
+  //padding-right: 64px;
+  //padding-top: 243px;
+  //padding-bottom: 180px;
+
+  &::before {
+    content: '“';
+  }
+
+  &::after {
+    content: '”';
+  }
+
+  &::before,
+  &::after {
+    font-family: "NoticiaText-BoldItalic", sans-serif;
+    font-size: 144px;
+    color: #F4F4ED;
+    //line-height: 150.1%;
+    //text-align: center;
+  }
+}
+
+//form
 .subscribe--title {
   @include title();
 }

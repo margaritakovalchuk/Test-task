@@ -38,9 +38,9 @@ function sass() {
         .src(path.css.src + '/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(gulpSass().on('error', gulpSass.logError))
-        .pipe(sourcemaps.write())
         .pipe(cleanCSS())
         .pipe(autoPrefix())
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.css.dist))
         .pipe(browserSync.stream());
 }

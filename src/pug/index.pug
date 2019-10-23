@@ -10,7 +10,6 @@ html(lang="en")
         link(href="css/main.css" rel="stylesheet")
         title Test task
     body
-        // TODO d-flex.flex-column
         section.screen
             header.screen-header
                 .container
@@ -80,36 +79,36 @@ html(lang="en")
                                     path(d="M31.354 24.354a.5.5 0 000-.708l-3.182-3.181a.5.5 0 10-.707.707L30.293 " +
                                     "24l-2.828 2.828a.5.5 0 10.707.707l3.182-3.181zM17 24.5h14v-1H17v1z" fill="#FCFCFC")
         section.main-content
-            article.intro
-                .container
-                    .row
-                        .col-md-5
-                            p.subheading Intro
-                            p.heading.intro-headining Our future
-                            p.lead.intro-lead Apparently we had reached a great height in the atmosphere, for the sky
-                                | was a dead black, and the stars had ceased to twinkle.
-                            p.text-content By the same illusion which lifts the horizon of the sea to the level of the
-                                | spectator on a hillside, the sable cloud beneath was dished out, and the car seemed
-                                | to float in the middle of an immense dark sphere, whose upper half was strewn with silver.
-                            a.button-main(href="#") Learn more
-                        .col-md-5
-                            img.img-fluid(src='../img/intro-img.png')
+            article.intro.d-flex.mx-auto
+                .intro-wrapper
+                    p.subheading Intro
+                    p.heading.intro-headining Our future
+                    p.lead.intro-lead Apparently we had reached a great height in the atmosphere, for the sky
+                        | was a dead black, and the stars had ceased to twinkle.
+                    p.text-content By the same illusion which lifts the horizon of the sea to the level of the
+                        | spectator on a hillside, the sable cloud beneath was dished out, and the car seemed
+                        | to float in the middle of an immense dark sphere, whose upper half was strewn with silver.
+                    a.button-main(href="#") Learn more
+                .wrapper
+                    img.img-fluid(src='../img/intro-img.png')
+                    .quote
+                        .blockquote--block-small
+                        .blockquote--block
+                            p Commodo sed egestas egestas fringilla phasellus faucibus.
             article.features
-                .container
-                    .row
-                        .col-md-5
-                            p.subheading Benefits
-                            p.heading.intro-headining Shaping the future
-                            p.lead.intro-lead Eget nunc scelerisque viverra mauris in aliquam. Dignissim sodales ut
-                                | eu sem integer vitae. Libero nunc consequat interdum varius.
-                            p.text-content Magna sit amet purus gravida. Sit amet porttitor eget dolor morbi non.
-                                | Lectus vestibulum mattis ullamcorper velit sed ullamcorper.
-                                | Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. Dui faucibus
-                                | in ornare quam viverra.
-                                | Posuere ac ut consequat semper viverra.
-                            a.button-main(href="#") Learn more
-                        .col-md-5
-                            img.img-fluid(src='../img/feature-img.png')
+                .features-wrapper
+                    p.subheading Benefits
+                    p.heading.intro-headining Shaping the future
+                    p.lead.intro-lead Eget nunc scelerisque viverra mauris in aliquam. Dignissim sodales ut
+                        | eu sem integer vitae. Libero nunc consequat interdum varius.
+                    p.text-content Magna sit amet purus gravida. Sit amet porttitor eget dolor morbi non.
+                        | Lectus vestibulum mattis ullamcorper velit sed ullamcorper.
+                        | Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. Dui faucibus
+                        | in ornare quam viverra.
+                        | Posuere ac ut consequat semper viverra.
+                    a.button-main(href="#") Learn more
+                .wrapper
+                    img.img-fluid(src='../img/feature-img.png')
             .subscribe
                 .container
                     .row
