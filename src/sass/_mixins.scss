@@ -1,0 +1,46 @@
+@mixin category {
+  font-family: "Mplus1p-ExtraBold", sans-serif;
+  font-size: 12.6px;
+  letter-spacing: 6px;
+  color: $complementary-color;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+@mixin title {
+  font-family: "Mplus1p-Medium", sans-serif;
+  font-size: 45px;
+  color: $complementary-text-color;
+  margin-bottom: 24px;
+}
+
+@mixin lead {
+  color: $complementary-text-color;
+  font-family: "Mplus1p-ExtraBold", sans-serif;
+  font-size: 18px;
+  line-height: 163.4%;
+  margin-bottom: 36px;
+}
+
+@mixin content {
+  font-family: "Mplus1p-Regular", sans-serif;
+  line-height: 163.4%;
+  color: $text-content;
+  margin-bottom: 53px;
+}
+
+@mixin button {
+  color: $main-text-color;
+  text-transform: uppercase;
+  background-color: $complementary-color;
+  letter-spacing: 2px;
+  font-size: 13.5px;
+  padding: 12px 45px;
+  border-radius: 36px;
+}
+
+@mixin button-hover {
+  color: $complementary-color;
+  background-color: $main-text-color;
+  border: 1px solid $complementary-color;
+}

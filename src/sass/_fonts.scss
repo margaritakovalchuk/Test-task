@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'Mplus1p-Medium';
+  src: url('#{$font-path}/Mplus1p-Medium.woff2') format('woff2'),
+  url('#{$font-path}/Mplus1p-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noticia Text';
+  src: url('#{$font-path}/NoticiaText-BoldItalic.woff2') format('woff2'),
+  url('#{$font-path}/NoticiaText-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Mplus1p-Regular';
+  src: url('#{$font-path}/Mplus1p-Regular.woff2') format('woff2'),
+  url('#{$font-path}/Mplus1p-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mplus1p-Bold';
+  src: url('#{$font-path}/Mplus1p-Bold.woff2') format('woff2'),
+  url('#{$font-path}/Mplus1p-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mplus1p-Thin';
+  src: url('#{$font-path}/Mplus1p-Thin.woff2') format('woff2'),
+  url('#{$font-path}/Mplus1p-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NoticiaText-Italic';
+  src: url('#{$font-path}/NoticiaText-Italic.woff2') format('woff2'),
+  url('#{$font-path}/NoticiaText-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Mplus1p-ExtraBold';
+  src: url('#{$font-path}/Mplus1p-ExtraBold.woff2') format('woff2'),
+  url('#{$font-path}/Mplus1p-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NoticiaText-Bold';
+  src: url('#{$font-path}/NoticiaText-Bold.woff2') format('woff2'),
+  url('#{$font-path}/NoticiaText-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mplus1p-Black';
+  src: url('#{$font-path}/Mplus1p-Black.woff2') format('woff2'),
+  url('#{$font-path}/Mplus1p-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mplus1p-Light';
+  src: url('#{$font-path}/Mplus1p-Light.woff2') format('woff2'),
+  url('#{$font-path}/Mplus1p-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NoticiaText-Regular';
+  src: url('#{$font-path}/NoticiaText-Regular.woff2') format('woff2'),
+  url('#{$font-path}/NoticiaText-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
