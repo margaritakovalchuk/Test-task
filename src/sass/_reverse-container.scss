@@ -1,0 +1,27 @@
+.reverse-container {
+  padding: 0 15px;
+}
+
+@media (min-width: 576px){
+  .reverse-container {
+    padding: 0 calc(50% - 255px);
+  }
+}
+
+@media (min-width: 768px){
+  .reverse-container {
+    padding: 0 calc(50% - 345px);
+  }
+}
+
+@media (min-width: 992px) {
+  .reverse-container {
+    padding: 0 calc(50% - 465px);
+  }
+}
+
+@media (min-width: 1200px){
+  .reverse-container {
+    padding: 0 calc(50% - 555px);
+  }
+}
