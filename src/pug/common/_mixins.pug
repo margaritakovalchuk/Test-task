@@ -1,0 +1,13 @@
+mixin navBar(data)
+    nav.main--nav
+        ul.nav.d-flex.justify-content-around
+            each item, itemIndex in data
+                if(data[itemIndex].active)
+                    li: span.active!= data[itemIndex].title
+                else
+                    li: a(href=data[itemIndex].url): span!= data[itemIndex].title
+
+mixin footerList(data)
+    ul.footer-list--items
+        each item, itemIndex in data
+            li: a(href=data[itemIndex].url)!= data[itemIndex].title

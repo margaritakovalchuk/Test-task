@@ -1,161 +1,93 @@
-doctype html
-html(lang="en")
-    head
-        // Required meta tags
-        meta(charset="utf-8")
-        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
-        // Bootstrap CSS
-        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
-        link(href="css/main.css" rel="stylesheet")
-        title Test task
-    body
-        section.screen
-            header.screen-header
-                .container
-                    .row.align-items-center
-                        .col-md-2
-                            p.main--logo.mb-0 Studio
-                        .col-md-5
-                            nav.main--nav
-                                ul.nav.d-flex.justify-content-space-arround
-                                    li: a(href="#").active Home
-                                    li: a(href="#") Services
-                                    li: a(href="#") Work
-                                    li: a(href="#") About
-                        .col-md-3.offset-md-1
-                            svg.phone--img(width="18" height="29" fill="none")
-                                path(d="M12.6 5.4v13.5H5.4V5.4h7.2zM15.3 0H2.7A2.7 2.7 0 000 2.7v23.4a2.7 2.7 0 002.7 " +
-                                "2.7h12.6a2.7 2.7 0 002.7-2.7V2.7A2.7 2.7 0 0015.3 0zM2.7 27a.903.903 0 01-.9-.9V2.7c0-.495" +
-                                ".405-.9.9-.9h12.6c.495 0 .9.405.9.9v23.4c0 .495-.405.9-.9.9H2.7zM13.725 3.6h-9.45a.677.677" +
-                                " 0 00-.675.675v15.75c0 .371.304.675.675.675h9.45a.677.677 0 00.675-.675V4.275a.677.677 0" +
-                                " 00-.675-.675zm-2.7 19.8h-4.05a.677.677 0 00-.675.675v.45c0 .371.304.675.675.675h4.05a." +
-                                "677.677 0 00.675-.675v-.45a.677.677 0 00-.675-.675z"
-                                    fill="#FCFCFC")
-                            a.main--phone(href="tel:01666693456") (01) 666 - 693 - 456
-                        .col-md-1.text-right.pr-0
-                            svg.main--burger(width="27" height="16" fill="none")
-                                path(fill="#FCFCFC" d="M0 0h27v2H0zM0 7h27v2H0zM9 14h18v2H9z")
-            section.screen-content
-                .content
-                    .container
-                        .row
-                            .col-md-11
-                                p.content--subtitle What we do?
-                                p.content--title We grow
-                                    br
-                                    span.pink great business
-                            .col-md-1.pr-0.text-right
-                                .more-info
-                                    p.more-info--content.ml-auto Scroll to see more
-                                    svg.arrow-more(width='21' height='46' fill='none' xmlns='http://www.w3.org/2000/svg')
-                                        mask#a(fill='#fff')
-                                            path(fill-rule='evenodd' clip-rule='evenodd' d='M21 10.5c0 .168-.004.334-.' +
-                                            '012.5H21v25h-.012c-.26 5.567-4.857 10-10.488 10C4.869 46 .273 41.567.012 ' +
-                                            '36H0V11h.012A10.677 10.677 0 010 10.5C0 4.701 4.701 0 10.5 0S21 4.701 21 10.5z')
-                                        path(d='M20.988 11l-.999-.047L19.94 12h1.048v-1zM21 11h1v-1h-1v1zm0 ' +
-                                        '25v1h1v-1h-1zm-.012 0v-1h-.954l-.045.953 1 .047zM.012 36l.999-.047L.966 ' +
-                                        '35H.012v1zM0 36h-1v1h1v-1zm0-25v-1h-1v1h1zm.012 0v1H1.06l-.05-1.047L.013 ' +
-                                        '11zm21.975.047c.009-.181.013-.364.013-.547h-2c0 .152-.004.303-.01.453l1.997.094zM21' +
-                                        ' 10h-.012v2H21v-2zm1 25.5V11h-2v24.5h2zm0 .5v-.5h-2v.5h2zm-1.012 ' +
-                                        '1H21v-2h-.012v2zm-.999-1.047A9.5 9.5 0 0110.5 45v2c6.168 0 11.201-4.855 ' +
-                                        '11.487-10.953l-1.998-.094zM10.5 45a9.5 9.5 0 01-9.49-9.047l-1.997.094C-.701 42.145 ' +
-                                        '4.332 47 10.5 47v-2zM0 37h.012v-2H0v2zm-1-1.5v.5h2v-.5h-2zM-1 11v24.5h2V11h-2zm1.' +
-                                        '012-1H0v2h.012v-2zM-1 10.5c0 .183.004.366.013.547l1.998-.094A9.673 9.673 0 011 ' +
-                                        '10.5h-2zM10.5-1C4.149-1-1 4.149-1 10.5h2A9.5 9.5 0 0110.5 1v-2zM22 10.5C22 ' +
-                                        '4.149 16.851-1 10.5-1v2a9.5 9.5 0 019.5 9.5h2z' fill='#fff' fill-opacity='.5'
-                                            mask='url(#a)')
-                                        path(d='M10.646 37.354a.5.5 0 00.708 0l3.182-3.182a.5.5 0 10-.708-.707L11 ' +
-                                        '36.293l-2.828-2.828a.5.5 0 10-.708.707l3.182 3.182zM10.5 10v27h1V10h-1z'
-                                            fill='#FCFCFC')
-                .container-fluid.px-0
-                    .row.no-gutters
-                        .col-md-7
-                            .subheader.d-flex.align-items-center.justify-content-between
-                                p.content-subheader Velit laoreet id donec ultrices. Ut lectus arcu bibendum varius.
-                                svg.arrow-right(width="48" height="48" fill="none")
-                                    circle(cx="24" cy="24" r="24" fill="#C4C4C4" fill-opacity=".05")
-                                    circle(cx="24" cy="24" r="23.5" stroke="#fff" stroke-opacity=".5")
-                                    path(d="M31.354 24.354a.5.5 0 000-.708l-3.182-3.181a.5.5 0 10-.707.707L30.293 " +
-                                    "24l-2.828 2.828a.5.5 0 10.707.707l3.182-3.181zM17 24.5h14v-1H17v1z" fill="#FCFCFC")
-        section.main-content
-            article.intro.d-flex.mx-auto
-                .intro-wrapper
-                    p.subheading Intro
-                    p.heading.intro-headining Our future
-                    p.lead.intro-lead Apparently we had reached a great height in the atmosphere, for the sky
-                        | was a dead black, and the stars had ceased to twinkle.
-                    p.text-content By the same illusion which lifts the horizon of the sea to the level of the
-                        | spectator on a hillside, the sable cloud beneath was dished out, and the car seemed
-                        | to float in the middle of an immense dark sphere, whose upper half was strewn with silver.
-                    a.button-main(href="#") Learn more
-                .wrapper
-                    img.img-fluid(src='../img/intro-img.png')
-                    .quote
-                        .blockquote--block-small
-                        .blockquote--block
-                            p Commodo sed egestas egestas fringilla phasellus faucibus.
-            article.features
-                .features-wrapper
-                    p.subheading Benefits
-                    p.heading.intro-headining Shaping the future
-                    p.lead.intro-lead Eget nunc scelerisque viverra mauris in aliquam. Dignissim sodales ut
-                        | eu sem integer vitae. Libero nunc consequat interdum varius.
-                    p.text-content Magna sit amet purus gravida. Sit amet porttitor eget dolor morbi non.
-                        | Lectus vestibulum mattis ullamcorper velit sed ullamcorper.
-                        | Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. Dui faucibus
-                        | in ornare quam viverra.
-                        | Posuere ac ut consequat semper viverra.
-                    a.button-main(href="#") Learn more
-                .wrapper
-                    img.img-fluid(src='../img/feature-img.png')
-            .subscribe
+extends layouts/_base
+
+block content
+    section.screen.d-flex.flex-column
+        include partials/_header
+        section.screen-content.m-auto
+            .content
                 .container
                     .row
-                        .col-md-7.m-auto.text-center.p-0
-                            p.subscribe--title Subscribe to our newsletter
-                            p.subscribe--subtitle Cras pulvinar mattis nunc sed blandit.
-                        .col-md-6.m-auto
-                            .form-inline.subscribe-form
-                                label.sr-only Enter your email
-                                input.flex-grow-1(type="email" placeholder="Enter email")
-                                button.button-subscribe(type="submit") Subscribe
-                                    svg.arrow-right-short(width="27" height="27" fill="none")
-                                        circle(cx="13.5" cy="13.5" r="13" stroke="#F61067" stroke-opacity=".5")
-                                        path(d="M17.791 13.854a.5.5 0 000-.708L14.61 9.964a.5.5 0 10-.707" +
-                                        ".708L16.73 13.5l-2.828 2.828a.5.5 0 10.707.707l3.182-3.181zM9.562 14h7" +
-                                        ".876v-1H9.563v1z" fill="#F61067")
-        footer.main-footer
+                        .col-md-11
+                            p.content--subtitle What we do?
+                            p.content--title We grow
+                                br
+                                span.pink great business
+                        .col-md-1.pr-0.text-right
+                            .more-info
+                                p.more-info--content.ml-auto Scroll to see more
+                                svg.arrow-more(width='21' height='46' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                    mask#a(fill='#fff')
+                                        path(fill-rule='evenodd' clip-rule='evenodd' d='M21 10.5c0 .168-.004.334-.' +
+                                        '012.5H21v25h-.012c-.26 5.567-4.857 10-10.488 10C4.869 46 .273 41.567.012 ' +
+                                        '36H0V11h.012A10.677 10.677 0 010 10.5C0 4.701 4.701 0 10.5 0S21 4.701 21 10.5z')
+                                    path(d='M20.988 11l-.999-.047L19.94 12h1.048v-1zM21 11h1v-1h-1v1zm0 ' +
+                                    '25v1h1v-1h-1zm-.012 0v-1h-.954l-.045.953 1 .047zM.012 36l.999-.047L.966 ' +
+                                    '35H.012v1zM0 36h-1v1h1v-1zm0-25v-1h-1v1h1zm.012 0v1H1.06l-.05-1.047L.013 ' +
+                                    '11zm21.975.047c.009-.181.013-.364.013-.547h-2c0 .152-.004.303-.01.453l1.997.094zM21' +
+                                    ' 10h-.012v2H21v-2zm1 25.5V11h-2v24.5h2zm0 .5v-.5h-2v.5h2zm-1.012 ' +
+                                    '1H21v-2h-.012v2zm-.999-1.047A9.5 9.5 0 0110.5 45v2c6.168 0 11.201-4.855 ' +
+                                    '11.487-10.953l-1.998-.094zM10.5 45a9.5 9.5 0 01-9.49-9.047l-1.997.094C-.701 42.145 ' +
+                                    '4.332 47 10.5 47v-2zM0 37h.012v-2H0v2zm-1-1.5v.5h2v-.5h-2zM-1 11v24.5h2V11h-2zm1.' +
+                                    '012-1H0v2h.012v-2zM-1 10.5c0 .183.004.366.013.547l1.998-.094A9.673 9.673 0 011 ' +
+                                    '10.5h-2zM10.5-1C4.149-1-1 4.149-1 10.5h2A9.5 9.5 0 0110.5 1v-2zM22 10.5C22 ' +
+                                    '4.149 16.851-1 10.5-1v2a9.5 9.5 0 019.5 9.5h2z' fill='#fff' fill-opacity='.5'
+                                        mask='url(#a)')
+                                    path(d='M10.646 37.354a.5.5 0 00.708 0l3.182-3.182a.5.5 0 10-.708-.707L11 ' +
+                                    '36.293l-2.828-2.828a.5.5 0 10-.708.707l3.182 3.182zM10.5 10v27h1V10h-1z'
+                                        fill='#FCFCFC')
+            .reverse-container.subheader
+                .d-flex.align-items-center
+                    p.content-subheader Velit laoreet id donec ultrices. Ut lectus arcu bibendum varius.
+                    svg.arrow-right(width="48" height="48" fill="none")
+                            circle(cx="24" cy="24" r="24" fill="#C4C4C4" fill-opacity=".05")
+                            circle(cx="24" cy="24" r="23.5" stroke="#fff" stroke-opacity=".5")
+                            path(d="M31.354 24.354a.5.5 0 000-.708l-3.182-3.181a.5.5 0 10-.707.707L30.293 " +
+                            "24l-2.828 2.828a.5.5 0 10.707.707l3.182-3.181zM17 24.5h14v-1H17v1z" fill="#FCFCFC")
+    section.main-content
+        article.intro.d-flex.mx-auto
+            .intro-wrapper
+                p.subheading Intro
+                p.heading.intro-headining Our future
+                p.lead.intro-lead Apparently we had reached a great height in the atmosphere, for the sky
+                    | was a dead black, and the stars had ceased to twinkle.
+                p.text-content By the same illusion which lifts the horizon of the sea to the level of the
+                    | spectator on a hillside, the sable cloud beneath was dished out, and the car seemed
+                    | to float in the middle of an immense dark sphere, whose upper half was strewn with silver.
+                a.button-main(href="#") Learn more
+            .wrapper
+                img.img-fluid(src='../img/intro-img.png')
+                .quote
+                    .blockquote--block-small
+                    .blockquote--block
+                        p Commodo sed egestas egestas fringilla phasellus faucibus.
+        article.features
+            .features-wrapper
+                p.subheading Benefits
+                p.heading.intro-headining Shaping the future
+                p.lead.intro-lead Eget nunc scelerisque viverra mauris in aliquam. Dignissim sodales ut
+                    | eu sem integer vitae. Libero nunc consequat interdum varius.
+                p.text-content Magna sit amet purus gravida. Sit amet porttitor eget dolor morbi non.
+                    | Lectus vestibulum mattis ullamcorper velit sed ullamcorper.
+                    | Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. Dui faucibus
+                    | in ornare quam viverra.
+                    | Posuere ac ut consequat semper viverra.
+                a.button-main(href="#") Learn more
+            .wrapper
+                img.img-fluid(src='../img/feature-img.png')
+        .subscribe
             .container
                 .row
-                    .col-md-2
-                        p.footer--title Lopper
-                        p.footer--subtitle Eu augue ut lectus arcu bibendum at.
-                    .col-md-6
-                        .footer-lists.d-flex.justify-content-between
-                            .footer-list
-                                p.footer-list--title Menu
-                                    ul.footer-list--items
-                                        li: a(href="#") Home
-                                        li: a(href="#") About
-                                        li: a(href="#") Services
-                                        li: a(href="#") News
-                                        li: a(href="#") Gallery
-                                        li: a(href="#") Contact
-                            .footer-list
-                                p.footer-list--title Services
-                                    ul.footer-list--items
-                                        li: a(href="#") Lorem
-                                        li: a(href="#") Ipsum
-                                        li: a(href="#") Dolor
-                                        li: a(href="#") Sit Amet
-                            .footer-list
-                                p.footer-list--title Contact us
-                                    .contacts.d-flex.flex-column
-                                        a(href="mailto:contact@lop.com") contact@lop.com
-                                        a(href="tel:856693456") 856 - 693 - 456
-                    .col-md-3.ml-auto
-                        .footer-list
-                            p.footer-list--title.d-inline-block Follow us
-                            svg(width="18" height="18")
-                                use(xlink:href="sprite.svg#twitter")
+                    .col-md-7.m-auto.text-center.p-0
+                        p.subscribe--title Subscribe to our newsletter
+                        p.subscribe--subtitle Cras pulvinar mattis nunc sed blandit.
+                    .col-md-6.m-auto
+                        .form-inline.subscribe-form
+                            label.sr-only Enter your email
+                            input.flex-grow-1(type="email" placeholder="Enter email")
+                            button.button-subscribe(type="submit") Subscribe
+                                svg.arrow-right-short(width="27" height="27" fill="none")
+                                    circle(cx="13.5" cy="13.5" r="13" stroke="#F61067" stroke-opacity=".5")
+                                    path(d="M17.791 13.854a.5.5 0 000-.708L14.61 9.964a.5.5 0 10-.707" +
+                                    ".708L16.73 13.5l-2.828 2.828a.5.5 0 10.707.707l3.182-3.181zM9.562 14h7" +
+                                    ".876v-1H9.563v1z" fill="#F61067")
+

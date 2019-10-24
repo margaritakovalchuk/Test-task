@@ -1,0 +1,19 @@
+include ../common/_variables
+include ../common/_mixins
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        title #{title}
+        include ../partials/_styles
+    body
+        noscript
+            p.alert.alert-warning.text-center.mb-0 For full functionality of this site it is necessary to enable JavaScript.
+                | Here are the -
+                a(href="https://www.enable-javascript.com/" target="_blank")
+                    | instructions how to enable JavaScript in your web browser
+        block content
+        include ../partials/_footer
+        include ../partials/_scripts
