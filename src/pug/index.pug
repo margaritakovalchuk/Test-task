@@ -44,23 +44,22 @@ block content
                         path(d="M31.354 24.354a.5.5 0 000-.708l-3.182-3.181a.5.5 0 10-.707.707L30.293 " +
                         "24l-2.828 2.828a.5.5 0 10.707.707l3.182-3.181zM17 24.5h14v-1H17v1z" fill="#FCFCFC")
     section.main-content
-        article.intro
-            .reverse-container.d-flex
-                .intro-wrapper
-                    p.subheading Intro
-                    p.heading.intro-headining Our future
-                    p.lead.intro-lead Apparently we had reached a great height in the atmosphere, for the sky
-                        | was a dead black, and the stars had ceased to twinkle.
-                    p.text-content By the same illusion which lifts the horizon of the sea to the level of the
-                        | spectator on a hillside, the sable cloud beneath was dished out, and the car seemed
-                        | to float in the middle of an immense dark sphere, whose upper half was strewn with silver.
-                    a.button-main(href="#") Learn more
-                .wrapper.d-flex
-                    img.article--img.img-fluid(src='../img/intro-img.png')
-                    .quote
-                        .blockquote--block-big
-                        .blockquote--block.d-flex.flex-column.align-items-center
-                            p Commodo sed egestas egestas fringilla phasellus faucibus.
+        article.intro.mb-5
+            .intro-content.reverse-container
+                p.subheading Intro
+                p.heading.intro-heading Our future
+                p.lead.intro-lead Apparently we had reached a great height in the atmosphere, for the sky
+                    | was a dead black, and the stars had ceased to twinkle.
+                p.text-content By the same illusion which lifts the horizon of the sea to the level of the
+                    | spectator on a hillside, the sable cloud beneath was dished out, and the car seemed
+                    | to float in the middle of an immense dark sphere, whose upper half was strewn with silver.
+                a.button-main(href="#") Learn more
+            .intro-img-block
+                img.article--img(src='../img/intro-img.png')
+                .quote
+                    .blockquote--block-big
+                    .blockquote--block
+                        p Commodo sed egestas egestas fringilla phasellus faucibus.
         article.features
             .bg-container
                 .reverse-container.pl-sm-0
@@ -70,7 +69,7 @@ block content
             .reverse-container.d-flex
                 .features-wrapper
                     p.subheading Benefits
-                    p.heading.intro-headining Shaping the future
+                    p.heading.intro-heading Shaping the future
                     p.lead.intro-lead Eget nunc scelerisque viverra mauris in aliquam. Dignissim sodales ut
                         | eu sem integer vitae. Libero nunc consequat interdum varius.
                     p.text-content Magna sit amet purus gravida. Sit amet porttitor eget dolor morbi non.

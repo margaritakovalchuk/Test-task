@@ -68,12 +68,6 @@ ul {
   }
 }
 
-//.main--phone a {
-//  &:hover path {
-//    fill: $complementary-color;
-//  }
-//}
-
 .main--phone {
   svg {
     margin-right: 18px;
@@ -101,6 +95,15 @@ ul {
       width: 75%;
       height: 1px;
       background-color: $main-text-color;
+    }
+  }
+}
+
+.button--menu {
+  &:hover,
+  &:focus {
+    .main--burger path {
+      fill: $complementary-color;
     }
   }
 }
@@ -157,6 +160,13 @@ ul {
 
 .arrow-more {
   margin-right: -1px;
+  animation: shake 2s ease-in-out alternate infinite;
+}
+
+@keyframes shake {
+  100% {
+    transform: translateY(30px);
+  }
 }
 
 .subheader {
@@ -177,29 +187,112 @@ ul {
   }
 }
 
+.subheader {
+  &:hover .arrow-right {
+    animation: move 1s ease-in-out;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes move {
+  100% {
+    transform: translateX(30px);
+  }
+}
+
 .main-content {
   background-color: #ffffff;
+  padding: 108px 0;
 }
 
-.intro .reverse-container {
-  //padding-right: 0;
+.intro {
+  display: flex;
+  justify-content: space-between;
+
+  .intro-content {
+    padding-right: 0;
+    width: 45%;
+    align-items: center;
+  }
+
+  .intro-img-block {
+    display: flex;
+    width: 46%;
+    align-items: flex-start;
+
+    .article--img {
+      z-index: 2;
+      width: 70%;
+    }
+
+    .quote {
+      width: 100%;
+      margin-top: -36px;
+      margin-left: -183px;
+      background-color: $main-color;
+      position: relative;
+
+      .blockquote--block-big {
+        z-index: 1;
+        width: 100%;
+        height: 41px;
+      }
+
+      .blockquote--block {
+        z-index: 3;
+        font-family: "NoticiaText-Italic", sans-serif;
+        font-size: 23px;
+        background-color: $main-color;
+        color: $main-text-color;
+        position: absolute;
+        padding: 160px 65px 140px;
+        width: calc(100% - 64px);
+        top: 0;
+        right: 0;
+
+        p {
+          word-wrap: break-word;
+        }
+      }
+    }
+  }
 }
 
-.intro-wrapper,
+
+.blockquote--block {
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-family: inherit;
+    font-size: 144px;
+    color: #f4f4ed;
+    line-height: 0;
+    display: block;
+    text-align: center;
+  }
+
+  &::before {
+    content: '“';
+    margin-top: -38px;
+  }
+
+  &::after {
+    content: '”';
+    bottom: 30px;
+  }
+}
+
 .wrapper,
 .features-wrapper {
   width: 50%;
 }
 
-.intro-wrapper,
 .features-wrapper {
   margin-right: 128px;
 }
-
-//
-//.wrapper {
-//   width: calc((100% - 128px) / 2);
-// }
 
 .subheading {
   @include category();
@@ -230,57 +323,6 @@ ul {
 
 .article--img {
   z-index: 2;
-}
-
-.quote {
-  position: relative;
-  margin-top: -36px;
-  margin-left: -65px;
-  width: 441px;
-  height: 540px;
-}
-
-.blockquote--block-big {
-  z-index: 1;
-  position: absolute;
-  width: 441px;
-  height: 540px;
-  padding: 36px 20px 80px 65px;
-  background-color: red;
-}
-
-.blockquote--block {
-  font-family: "NoticiaText-Italic", sans-serif;
-  font-size: 22.5px;
-  line-height: 177.4%;
-  background-color: $main-color;
-  color: $main-text-color;
-  padding: 0 48px;
-  z-index: 4;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-
-  &::before {
-    content: '“';
-    top: -45px;
-  }
-
-  &::after {
-    content: '”';
-    bottom: -100px;
-  }
-
-  &::before,
-  &::after {
-    font-family: inherit;
-    font-size: 144px;
-    color: #f4f4ed;
-    line-height: 0;
-    display: block;
-    position: relative;
-    text-align: center;
-  }
 }
 
 .bg-container {
@@ -448,10 +490,7 @@ input[type="email"],
   align-items: end;
 }
 
-//path {
-//  fill: $main-text-color;
-//}
-
 a:hover .socials path {
   fill: $complementary-color;
 }
+
