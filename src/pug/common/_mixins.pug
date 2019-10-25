@@ -11,3 +11,13 @@ mixin footerList(data)
     ul.footer-list--items
         each item, itemIndex in data
             li: a(href=data[itemIndex].url)!= data[itemIndex].title
+
+mixin iconSvg(name, path, url, width, height)
+    - mod = mod || ''
+    a(href=url target="_blank")
+        svg(width=width height=height xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink")
+            use(xlink:href=path + ".svg#" + name)
+
+mixin socialIconList(data)
+    each item in data
+        +iconSvg(item.name, "../../img/sprite", item.url, item.width, item.height)
