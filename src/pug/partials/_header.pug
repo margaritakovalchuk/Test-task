@@ -1,15 +1,15 @@
 header.screen-header
     .container
         .row.align-items-center
-            .col-md-2
-                p.main--logo.mb-0 Studio
-            .col-md-5
+            .col-md-2.col-sm-3.col-6
+                a(href="#").main--logo.mb-0 Studio
+            .col-md-5.d-none.d-md-block
                 +navBar(headerMenu)
-            .col-md-3.offset-md-1
+            .col-md-5.text-right.col-sm-7.d-sm-block.d-none
                 span.main--phone
                     include ../../img/phone-ico.svg
                     a(href="tel:01666693456") (01) 666 - 693 - 456
-            .col-md-1.text-right.pr-0
+            .col-md-1.text-right.pr-md-0.col-sm-2.d-sm-block.d-md-none.col-6
                 button.button--menu.bg-transparent.border-0(type="button")
                     svg.main--burger(width="27" height="16" fill="none")
                         path(fill="#FCFCFC" d="M0 0h27v2H0zM0 7h27v2H0zM9 14h18v2H9z")

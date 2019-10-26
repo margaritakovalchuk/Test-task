@@ -53,6 +53,11 @@ ul {
 .main--logo {
   font-family: "Mplus1p-Black", Arial, sans-serif;
   font-size: 24px;
+
+  &:hover {
+    cursor: pointer;
+    color: $complementary-color;
+  }
 }
 
 .main--nav span,
@@ -87,6 +92,8 @@ ul {
 
 .main--nav {
   span.active {
+    cursor: default;
+
     &::after {
       content: "";
       display: block;
@@ -177,7 +184,7 @@ ul {
   font-family: "Mplus1p-Regular", Arial, sans-serif;
   padding-top: 35px;
   padding-bottom: 35px;
-  padding-right: 15px;
+  //padding-right: 15px;
   margin-bottom: 35px;
   display: inline-block;
 
@@ -211,7 +218,6 @@ ul {
   justify-content: space-between;
 
   .intro-content {
-    padding-right: 0;
     width: 45%;
     align-items: center;
   }
@@ -361,9 +367,6 @@ ul {
   margin-bottom: 45px;
 }
 
-.subscribe-form {
-  border-bottom: 3px solid #F4F4ED;
-}
 
 .subscribe-form input[placeholder],
 button[type="submit"] {
@@ -381,6 +384,7 @@ input[type="email"],
 .button-subscribe {
   border: 0;
   padding: 15px;
+  border-bottom: 3px solid #F4F4ED;
 
   &:focus {
     outline: none;
