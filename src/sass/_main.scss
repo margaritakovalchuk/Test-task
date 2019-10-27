@@ -141,13 +141,13 @@ ul {
   text-transform: uppercase;
 }
 
-.content--subtitle {
+.content--subtitle { //TODO
   font-size: 14.4px;
   letter-spacing: 4px;
   margin-bottom: 15px;
 }
 
-.content--title {
+.content--title { //TODO
   font-family: "Mplus1p-Black", Arial, sans-serif;
   font-size: 100px;
   line-height: 1.2;
@@ -176,7 +176,7 @@ ul {
   }
 }
 
-.subheader {
+.subheader { //TODO
   color: $main-text-color;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-left: none;
@@ -184,7 +184,6 @@ ul {
   font-family: "Mplus1p-Regular", Arial, sans-serif;
   padding-top: 35px;
   padding-bottom: 35px;
-  //padding-right: 15px;
   margin-bottom: 35px;
   display: inline-block;
 
@@ -245,7 +244,7 @@ ul {
         height: 41px;
       }
 
-      .blockquote--block {
+      .blockquote--block { //TODO
         z-index: 3;
         font-family: "NoticiaText-Italic", sans-serif;
         font-size: 23px;
@@ -266,7 +265,7 @@ ul {
 }
 
 
-.blockquote--block {
+.blockquote--block { //TODO
   &::before,
   &::after {
     position: absolute;
@@ -301,19 +300,19 @@ ul {
 }
 
 .subheading {
-  @include category();
+  @include text("Mplus1p-ExtraBold", 12px, 6px, $complementary-color, uppercase, 18px, 1.5);
 }
 
 .heading {
-  @include title();
+  @include text("Mplus1p-Medium", 45px, 0, $complementary-text-color, none, 24px, 1.5);
 }
 
 .lead {
-  @include lead();
+  @include text("Mplus1p-ExtraBold", 18px, 0, $complementary-text-color, none, 36px, 1.6);
 }
 
 .text-content {
-  @include content();
+  @include text("Mplus1p-Regular", 16px, 0, $text-content, none, 53px, 1.6);
 }
 
 .button-main {
@@ -357,24 +356,23 @@ ul {
 }
 
 .subscribe--title {
-  @include title();
+  @include text("Mplus1p-Medium", 45px, 0, $complementary-text-color, normal, 24px, 1.5);
 }
 
-.subscribe--subtitle {
+.subscribe--subtitle { //TODO
   font-size: 18px;
   font-family: "Mplus1p-Medium", sans-serif;
   color: $text-content;
   margin-bottom: 45px;
 }
 
-
-.subscribe-form input[placeholder],
+.subscribe-form input[placeholder], //TODO
 button[type="submit"] {
   font-family: "Mplus1p-ExtraBold", sans-serif;
   text-transform: uppercase;
 }
 
-.subscribe-form input[placeholder] {
+.subscribe-form input[placeholder] { //TODO
   color: #9B94A3;
   letter-spacing: 4px;
   font-size: 18px;
@@ -391,7 +389,7 @@ input[type="email"],
   }
 }
 
-.button-subscribe {
+.button-subscribe { //TODO
   font-size: 12.6px;
   letter-spacing: 6px;
   color: $complementary-color;
@@ -434,20 +432,20 @@ input[type="email"],
   color: $main-text-color;
 }
 
-.footer--title {
+.footer--title { //TODO
   font-family: "Mplus1p-Black", sans-serif;
   letter-spacing: 2px;
   font-size: 24px;
 }
 
-.footer--subtitle,
+.footer--subtitle, //TODO
 .contacts a {
   font-family: "Mplus1p-Regular", sans-serif;
   line-height: 163.4%;
   font-size: 16.2px;
 }
 
-.footer-list--title {
+.footer-list--title { //TODO
   font-family: "Mplus1p-ExtraBold", sans-serif;
   letter-spacing: 6px;
   font-size: 12.6px;
@@ -456,7 +454,7 @@ input[type="email"],
   text-transform: uppercase;
 }
 
-.footer-list--items a {
+.footer-list--items a { //TODO
   font-family: "Mplus1p-Bold", sans-serif;
   letter-spacing: 1px;
   font-size: 12.6px;
@@ -498,3 +496,51 @@ a:hover .socials path {
   fill: $complementary-color;
 }
 
+
+
+
+
+
+.features-test {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 90px;
+
+  .bg-container-test {
+    background-image: url(../img/bg-features.png),linear-gradient(to bottom,rgba(49,18,81,0) 0,#31124e 80%);
+    background-color: #30124e;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 60%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+.features-wrapper-left {
+  width: 45%;
+  z-index: 2;
+
+  p {
+    color: #fff;
+  }
+}
+.features-wrapper-right {
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+
+  p {
+    text-align: center;
+    writing-mode: vertical-lr;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #30124e;
+  }
+}

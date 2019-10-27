@@ -11,6 +11,7 @@ import plumber from 'gulp-plumber';
 import babel from 'gulp-babel';
 import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';
+import rename from 'gulp-rename';
 
 const path = {
     baseDir: './dist',
@@ -35,20 +36,34 @@ const path = {
         dist: './dist/fonts',
     },
     libs: {
-      bootstrap4: {
-          scss: './node_modules/bootstrap/scss/bootstrap.scss',
-      }
+        global: {
+            bootstrap4: {
+                scss: './node_modules/bootstrap/scss/bootstrap.scss',
+            }
+        },
+        local: {
+            baseDir: './src/libs',
+            slider: {
+                scss: `./src/libs/slider/slider.scss`,
+                js: './src/libs/slider/index.js',
+            }
+        },
     },
 };
 
 const sass = () => {
     return gulp
-        .src([`${path.libs.bootstrap4.scss}`, `${path.css.src}/**/*.scss`])
+        .src([`${path.libs.global.bootstrap4.scss}`, `${path.css.src}/**/*.scss`])
         .pipe(sourcemaps.init())
         .pipe(gulpSass().on('error', gulpSass.logError))
-        .pipe(cleanCSS())
         .pipe(autoPrefix())
         .pipe(concat('main.css'))
+        .pipe(gulp.dest(path.css.dist))
+        .pipe(cleanCSS())
+        .pipe(rename({
+            basename: 'main',
+            suffix: '.min',
+        }))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(path.css.dist))
         .pipe(browserSync.stream());
@@ -66,15 +81,33 @@ const html = () => {
         .pipe(browserSync.stream());
 };
 
+const js = () => {
+    return gulp.src([path.libs.local.slider.js, `${path.js.src}/**/*.js`])
+        .pipe(sourcemaps.init())
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(concat('main.js'))
+        .pipe(gulp.dest(path.js.dist))
+        .pipe(uglify())
+        .pipe(rename({
+            basename: 'main',
+            suffix: '.min',
+        }))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest(path.js.dist))
+        .pipe(browserSync.stream());
+};
+
 const sync = () => {
     browserSync.init({
         server: {
             baseDir: path.baseDir,
         }
     });
-    gulp.watch(`${path.css.src}/**/*.scss`, gulp.series(sass));
+    gulp.watch([`${path.libs.local.baseDir}/**/*.scss`, `${path.css.src}/**/*.scss`], gulp.series(sass));
     gulp.watch(`${path.html.src}/**/*.pug`, gulp.series(html));
-    gulp.watch(`${path.js.src}/**/*.js`, gulp.series(js));
+    gulp.watch([`${path.libs.local.baseDir}/**/*.js`, `${path.js.src}/**/*.js`], gulp.series(js));
     gulp.watch(`${path.html.dist}/**/*.html`).on('change', browserSync.reload);
 };
 
@@ -85,24 +118,12 @@ const minimizeImages = () => {
         .pipe(gulp.dest(path.img.dist));
 };
 
-
 const clean = () => {
     return del([
         path.css.dist,
         path.html.dist,
+        path.js.dist,
     ]);
-};
-
-const js =  () => {
-    return gulp.src(`${path.js.src}/**/*.js`)
-        .pipe(sourcemaps.init())
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
-        .pipe(uglify())
-        .pipe(concat('main.min.js'))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(path.js.dist));
 };
 
 const fonts = () => {
