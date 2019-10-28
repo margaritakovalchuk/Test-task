@@ -18,13 +18,14 @@
     color: $main-text-color;
   }
 
-  .main--phone svg {
+  .header--phone svg {
     margin-right: 13px;
   }
 
   .screen-header ul {
     margin-left: 0;
   }
+
   .subheader {
     .arrow-right {
       margin-right: 35px;
@@ -35,7 +36,7 @@
     flex-shrink: 3;
   }
 
-  .intro .intro-img-block .quote .blockquote--block {
+  .blockquote--block {
     padding: 111px 41px 102px;
     width: calc(100% - 100px);
   }
@@ -63,22 +64,23 @@
       font-size: 110px;
     }
   }
-  .main-footer {
+
+  .screen-footer {
     padding-top: 126px;
     padding-bottom: 126px;
   }
+
   .footer--title {
     margin-bottom: 5px;
   }
 }
 
 @media (max-width: 767px) {
-  .main--burger {
+  .nav--burger {
     margin-right: 0;
   }
 
   .mobile-menu li {
-
     span.active {
       cursor: default;
       color: #4e555b;
@@ -106,7 +108,7 @@
     margin-bottom: 105px;
   }
 
-  .intro .intro-img-block {
+  .intro .intro-img--block {
     width: 100%;
   }
 
@@ -122,7 +124,7 @@
     margin-bottom: 30px;
   }
 
-  .intro-img-block {
+  .intro-img--block {
     width: 100%;
   }
 
@@ -130,19 +132,19 @@
     margin-bottom: 70px;
   }
 
-  .features-subheading {
+  .features--subheading {
     @include text("Mplus1p-ExtraBold", 12px, 6px, $complementary-color, uppercase, 15px, 1.5);
   }
 
-  .features-heading {
+  .features--heading {
     @include text("Mplus1p-Medium", 45px, 0, $complementary-text-color, none, 20px, 1);
   }
 
-  .features-lead {
+  .features--lead {
     @include text("Mplus1p-ExtraBold", 18px, 0, $complementary-text-color, none, 25px, 1.6);
   }
 
-  .features-text-content {
+  .features--text-content {
     @include text("Mplus1p-Regular", 16px, 0, $text-content, none, 30px, 1.6);
   }
 
@@ -162,48 +164,48 @@
       margin-right: 10px;
     }
   }
-  .main-footer {
+
+  .screen-footer {
     padding-top: 100px;
     padding-bottom: 100px;
   }
 }
 
-
 @media (max-width: 575px) {
-  .main--phone a {
+  .header--phone a {
     font-size: 13px;
   }
 
-  .intro .intro-content {
+  .intro-content {
     margin-bottom: 45px;
   }
 
-  .intro .intro-img-block .img-thumb {
+  .img-thumb {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     overflow: hidden;
     margin: 0 auto -55px;
+
+    .article--img {
+      position: relative;
+      z-index: 4;
+      width: 100%;
+    }
   }
 
-  .intro .intro-img-block .article--img {
-    position: relative;
-    z-index: 4;
-    width: 100%;
-  }
-
-  .intro .intro-img-block {
+  .intro-img--block {
     display: block;
     position: relative;
   }
 
-  .intro .intro-img-block .quote {
+  .quote {
     width: 100%;
     margin-top: 0;
     margin-left: 0;
   }
 
-  .intro .intro-img-block .quote .blockquote--block {
+  .blockquote--block {
     padding: 92px 15px 81px;
     width: 100%;
     position: static;
@@ -232,6 +234,7 @@
 
   .button-subscribe {
     justify-content: center;
+    flex-grow: 1;
   }
 
   .subscribe--title {
@@ -243,39 +246,29 @@
     margin-bottom: 25px;
   }
 
-  .button-subscribe {
-    flex-grow: 1;
-  }
-
-  .main-footer {
+  .screen-footer {
     padding-top: 50px;
     padding-bottom: 50px;
   }
 }
 
 @media (max-width: 509px) {
-  .subscribe.test {
-    .button-subscribe {
-      span {
-        display: none;
-      }
+
+  .button-subscribe {
+    span {
+      display: none;
     }
   }
 }
+
 
 @media (max-width: 479px) {
   .subscribe--title {
     font-size: 25px;
   }
 
-  .subscribe.test {
-    input[type="email"] {
-      margin-bottom: 0;
-    }
-  }
-
   input[type="email"] {
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 
   .footer-list:not(:last-child) {
@@ -288,14 +281,13 @@
 }
 
 @media (max-width: 374px) {
-  .subscribe.test {
-    input[type="email"] {
-      font-size: 16px;
-    }
 
-    .button-subscribe {
-      padding-left: 5px;
-      padding-right: 5px;
-    }
+  input[type="email"] {
+    font-size: 16px;
+  }
+
+  .button-subscribe {
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }

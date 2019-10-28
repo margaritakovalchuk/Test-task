@@ -13,9 +13,9 @@ block content
                                 br
                                 span.pink great business
                         .col-md-1.pr-0.text-right.d-none.d-md-block
-                            .more-info
+                            a(href="#down").more-info.d-block
                                 p.more-info--content.ml-auto Scroll to see more
-                                svg.arrow-more(width='21' height='46' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                svg.more-info--arrow(width='21' height='46' fill='none' xmlns='http://www.w3.org/2000/svg')
                                     mask#a(fill='#fff')
                                         path(fill-rule='evenodd' clip-rule='evenodd' d='M21 10.5c0 .168-.004.334-.' +
                                         '012.5H21v25h-.012c-.26 5.567-4.857 10-10.488 10C4.869 46 .273 41.567.012 ' +
@@ -43,86 +43,84 @@ block content
                         circle(cx="24" cy="24" r="23.5" stroke="#fff" stroke-opacity=".5")
                         path(d="M31.354 24.354a.5.5 0 000-.708l-3.182-3.181a.5.5 0 10-.707.707L30.293 " +
                         "24l-2.828 2.828a.5.5 0 10.707.707l3.182-3.181zM17 24.5h14v-1H17v1z" fill="#FCFCFC")
-    section.main-content
-        article.intro.mb-5
-            .intro-content.reverse-container.flex-wrap.pr-md-0
-                p.subheading Intro
-                p.heading.intro-heading Our future
-                p.lead.intro-lead Apparently we had reached a great height in the atmosphere, for the sky
-                    | was a dead black, and the stars had ceased to twinkle.
-                p.text-content By the same illusion which lifts the horizon of the sea to the level of the
-                    | spectator on a hillside, the sable cloud beneath was dished out, and the car seemed
-                    | to float in the middle of an immense dark sphere, whose upper half was strewn with silver.
-                a.button-main(href="#") Learn more
-            .intro-img-block.reverse-container.px-md-0
-                .img-thumb
-                    img.article--img(src='../img/intro-img.png')
-                .quote
-                    .blockquote--block-big.d-none.d-sm-block
-                    .blockquote--block
-                        p Commodo sed egestas egestas fringilla phasellus faucibus.
+    a(id="down")
+        section.main-content
+            article.intro.mb-5
+                .intro-content.reverse-container.flex-wrap.pr-md-0
+                    p.subheading.intro--subheading Intro
+                    p.heading.intro--heading Our future
+                    p.lead.intro--lead Apparently we had reached a great height in the atmosphere, for the sky
+                        | was a dead black, and the stars had ceased to twinkle.
+                    p.text-content By the same illusion which lifts the horizon of the sea to the level of the
+                        | spectator on a hillside, the sable cloud beneath was dished out, and the car seemed
+                        | to float in the middle of an immense dark sphere, whose upper half was strewn with silver.
+                    a.button-main(href="#") Learn more
+                .intro-img--block.reverse-container.px-md-0.offset-md-1
+                    .img-thumb
+                        img.article--img(src='../img/intro-img.png')
+                    .quote
+                        .blockquote--block-big.d-none.d-sm-block
+                        .blockquote--block
+                            p Commodo sed egestas egestas fringilla phasellus faucibus.
 
-        article.features
-            .bg-container.d-md-block.d-none
-            .features-wrapper
-                .container
-                    p.features-subheading Benefits
-                    .row
-                        .col-md-5.features-content
-                            p.heading.features-heading Shaping the future
-                            p.lead.features-lead Eget nunc scelerisque viverra mauris in aliquam. Dignissim sodales ut
-                                | eu sem integer vitae. Libero nunc consequat interdum varius.
-                            p.text-content.features-text-content Magna sit amet purus gravida. Sit amet porttitor eget dolor morbi non.
-                                | Lectus vestibulum mattis ullamcorper velit sed ullamcorper.
-                                | Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. Dui faucibus
-                                | in ornare quam viverra.
-                                | Posuere ac ut consequat semper viverra.
-                            a.button-main(href="#") Learn more
-                        .col-md-5.offset-md-1.offset-0.col-sm-12
-                            .row
-                            img.article--img.img-fluid(src='../img/feature-img.png')
-                        .col-md-1.d-md-flex.d-none
-                            a(href="#" target="_blank").app-link Mobile App
-                    .row
-                        .col-md-2.offset-md-9
-                            .pager
-                                .counter.d-none.d-md-block
-                                    span.current 1
-                                    span /
-                                    span.total 3
-                                .controls
-                                    button(type="button").left.mr-3.mr-md-0
-                                        svg.arrow-right-short.arrow-right--reverse(width="27" height="27" fill="none")
-                                            circle(cx="13.5" cy="13.5" r="13" stroke="#F61067" stroke-opacity=".5")
-                                            path(d="M17.791 13.854a.5.5 0 000-.708L14.61 9.964a.5.5 0 10-.707" +
-                                            ".708L16.73 13.5l-2.828 2.828a.5.5 0 10.707.707l3.182-3.181zM9.562 14h7" +
-                                            ".876v-1H9.563v1z" fill="#F61067")
-                                    button(type="button").right
-                                        svg.arrow-right-short(width="27" height="27" fill="none")
-                                            circle(cx="13.5" cy="13.5" r="13" stroke="#F61067" stroke-opacity=".5")
-                                            path(d="M17.791 13.854a.5.5 0 000-.708L14.61 9.964a.5.5 0 10-.707" +
-                                            ".708L16.73 13.5l-2.828 2.828a.5.5 0 10.707.707l3.182-3.181zM9.562 14h7" +
-                                            ".876v-1H9.563v1z" fill="#F61067")
-                    .slider-control.left.inactive
-                    .slider-control.right
-        .subscribe.test
-            .container
-                form
-                    .row
-                        legend.col-md-12.text-center.p-md-0
-                            p.subscribe--title Subscribe to our newsletter
-                            p.subscribe--subtitle Cras pulvinar mattis nunc sed blandit.
-                        .col-xl-6.m-auto.col-lg-8
-                            .form-inline.subscribe-form
-                                label.sr-only(for="email") Enter your email
-                                .input-group.w-100
-                                    input#email.flex-grow-1(type="email" placeholder="Enter email")
-                                    .input-group-append
-                                        button.button-subscribe(type="submit")
-                                            span Subscribe
+            article.features
+                .bg-container.d-md-block.d-none
+                .features-wrapper
+                    .container
+                        p.features--subheading Benefits
+                        .row
+                            .col-md-5.features-content
+                                p.heading.features--heading Shaping the future
+                                p.lead.features--lead Eget nunc scelerisque viverra mauris in aliquam. Dignissim sodales ut
+                                    | eu sem integer vitae. Libero nunc consequat interdum varius.
+                                p.text-content.features--text-content Magna sit amet purus gravida. Sit amet porttitor eget dolor morbi non.
+                                    | Lectus vestibulum mattis ullamcorper velit sed ullamcorper.
+                                    | Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. Dui faucibus
+                                    | in ornare quam viverra.
+                                    | Posuere ac ut consequat semper viverra.
+                                a.button-main(href="#") Learn more
+                            .col-md-5.offset-md-1.offset-0.col-sm-12
+                                img.article--img.img-fluid(src='../img/feature-img.png')
+                            .col-md-1.d-md-flex.d-none
+                                a(href="#" target="_blank").app-link Mobile Apps
+                        .row
+                            .col-md-2.offset-md-9
+                                .pager
+                                    .pager--counter.d-none.d-md-block
+                                        span.current 1
+                                        span /
+                                        span.total 3
+                                    .pager--controls
+                                        button(type="button").left.mr-3.mr-md-0
+                                            svg.arrow-right-short.arrow-right--reverse(width="27" height="27" fill="none")
+                                                circle(cx="13.5" cy="13.5" r="13" stroke="#F61067" stroke-opacity=".5")
+                                                path(d="M17.791 13.854a.5.5 0 000-.708L14.61 9.964a.5.5 0 10-.707" +
+                                                ".708L16.73 13.5l-2.828 2.828a.5.5 0 10.707.707l3.182-3.181zM9.562 14h7" +
+                                                ".876v-1H9.563v1z" fill="#F61067")
+                                        button(type="button").right
                                             svg.arrow-right-short(width="27" height="27" fill="none")
                                                 circle(cx="13.5" cy="13.5" r="13" stroke="#F61067" stroke-opacity=".5")
                                                 path(d="M17.791 13.854a.5.5 0 000-.708L14.61 9.964a.5.5 0 10-.707" +
                                                 ".708L16.73 13.5l-2.828 2.828a.5.5 0 10.707.707l3.182-3.181zM9.562 14h7" +
                                                 ".876v-1H9.563v1z" fill="#F61067")
+            .subscribe
+                .container
+                    form
+                        .row
+                            legend.col-md-12.text-center.p-md-0
+                                p.subscribe--title Subscribe to our newsletter
+                                p.subscribe--subtitle Cras pulvinar mattis nunc sed blandit.
+                            .col-xl-6.m-auto.col-lg-8
+                                .form-inline.subscribe--form
+                                    label.sr-only(for="email") Enter your email
+                                    .input-group.w-100
+                                        input#email.flex-grow-1(type="email" placeholder="Enter email")
+                                        .input-group-append
+                                            button.button-subscribe(type="submit")
+                                                span Subscribe
+                                                svg.arrow-right-short(width="27" height="27" fill="none")
+                                                    circle(cx="13.5" cy="13.5" r="13" stroke="#F61067" stroke-opacity=".5")
+                                                    path(d="M17.791 13.854a.5.5 0 000-.708L14.61 9.964a.5.5 0 10-.707" +
+                                                    ".708L16.73 13.5l-2.828 2.828a.5.5 0 10.707.707l3.182-3.181zM9.562 14h7" +
+                                                    ".876v-1H9.563v1z" fill="#F61067")
 

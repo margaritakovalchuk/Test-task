@@ -1,7 +1,7 @@
 const init = () => {
     new MobileMenu({
-        menuClass: '.main--nav .nav',
-        menuButtonClass: '.button--menu',
+        menuClass: '.header--nav .nav',
+        menuButtonClass: '.nav--button',
         sidebarClass: '.sidebar-menu',
         mobileMenuClass: '.mobile-menu',
         overlayClass: '.overlay',
