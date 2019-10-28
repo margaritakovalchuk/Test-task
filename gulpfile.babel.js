@@ -43,17 +43,13 @@ const path = {
         },
         local: {
             baseDir: './src/libs',
-            slider: {
-                scss: `./src/libs/slider/slider.scss`,
-                js: './src/libs/slider/index.js',
-            }
         },
     },
 };
 
 const sass = () => {
     return gulp
-        .src([`${path.libs.global.bootstrap4.scss}`, `${path.css.src}/**/*.scss`])
+        .src([`${path.libs.global.bootstrap4.scss}`, `${path.libs.local.baseDir}/**/*.scss`, `${path.css.src}/**/*.scss`])
         .pipe(sourcemaps.init())
         .pipe(gulpSass().on('error', gulpSass.logError))
         .pipe(autoPrefix())
@@ -82,7 +78,7 @@ const html = () => {
 };
 
 const js = () => {
-    return gulp.src([path.libs.local.slider.js, `${path.js.src}/**/*.js`])
+    return gulp.src([`${path.libs.local.baseDir}/**/*.js`, `${path.js.src}/**/*.js`])
         .pipe(sourcemaps.init())
         .pipe(babel({
             presets: ['@babel/env']

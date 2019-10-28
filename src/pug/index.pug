@@ -55,50 +55,53 @@ block content
                     | to float in the middle of an immense dark sphere, whose upper half was strewn with silver.
                 a.button-main(href="#") Learn more
             .intro-img-block.reverse-container.px-md-0
-                img.article--img(src='../img/intro-img.png')
+                .img-thumb
+                    img.article--img(src='../img/intro-img.png')
                 .quote
                     .blockquote--block-big.d-none.d-sm-block
                     .blockquote--block
                         p Commodo sed egestas egestas fringilla phasellus faucibus.
 
-        article.features-test.reverse-container
-            .features-wrapper-left
-                p.subheading Benefits
-                p.heading.intro-heading Shaping the future
-                p.lead.intro-lead Eget nunc scelerisque viverra mauris in aliquam. Dignissim sodales ut
-                    | eu sem integer vitae. Libero nunc consequat interdum varius.
-                p.text-content Magna sit amet purus gravida. Sit amet porttitor eget dolor morbi non.
-                    | Lectus vestibulum mattis ullamcorper velit sed ullamcorper.
-                    | Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. Dui faucibus
-                    | in ornare quam viverra.
-                    | Posuere ac ut consequat semper viverra.
-                a.button-main(href="#") Learn more
-            .features-wrapper-right
-                img.article--img(src='../img/feature-img.png')
-                p Mobile App
+        article.features-test
             .bg-container-test
-
-
-        article.features
-            .bg-container
-                .reverse-container.pl-sm-0
-                    .row
-                        .col-md-9
-                            .bg-purple
-            .reverse-container.d-flex
-                .features-wrapper
+            .features-test-wrapper
+                .container
                     p.subheading Benefits
-                    p.heading.intro-heading Shaping the future
-                    p.lead.intro-lead Eget nunc scelerisque viverra mauris in aliquam. Dignissim sodales ut
-                        | eu sem integer vitae. Libero nunc consequat interdum varius.
-                    p.text-content Magna sit amet purus gravida. Sit amet porttitor eget dolor morbi non.
-                        | Lectus vestibulum mattis ullamcorper velit sed ullamcorper.
-                        | Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. Dui faucibus
-                        | in ornare quam viverra.
-                        | Posuere ac ut consequat semper viverra.
-                    a.button-main(href="#") Learn more
-                .wrap
-                    img.article--img.img-fluid(src='../img/feature-img.png')
+                    .row
+                        .col-md-5
+                            p.heading.intro-heading Shaping the future
+                            p.lead.intro-lead Eget nunc scelerisque viverra mauris in aliquam. Dignissim sodales ut
+                                | eu sem integer vitae. Libero nunc consequat interdum varius.
+                            p.text-content Magna sit amet purus gravida. Sit amet porttitor eget dolor morbi non.
+                                | Lectus vestibulum mattis ullamcorper velit sed ullamcorper.
+                                | Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. Dui faucibus
+                                | in ornare quam viverra.
+                                | Posuere ac ut consequat semper viverra.
+                            a.button-main(href="#") Learn more
+                        .col-md-5.offset-md-1
+                            img.article--img.img-fluid(src='../img/feature-img.png')
+                        .col-md-1.d-flex
+                            a(href="#" target="_blank").app-link Mobile App
+                    .row
+                        .col-md-2.offset-md-9
+                            .pager
+                                .counter
+                                    span.current 1
+                                    span /
+                                    span.total 3
+                                .controls
+                                    button(type="button").left
+                                        svg.arrow-right-short.arrow-right--reverse(width="27" height="27" fill="none")
+                                            circle(cx="13.5" cy="13.5" r="13" stroke="#F61067" stroke-opacity=".5")
+                                            path(d="M17.791 13.854a.5.5 0 000-.708L14.61 9.964a.5.5 0 10-.707" +
+                                            ".708L16.73 13.5l-2.828 2.828a.5.5 0 10.707.707l3.182-3.181zM9.562 14h7" +
+                                            ".876v-1H9.563v1z" fill="#F61067")
+                                    button(type="button").right
+                                        svg.arrow-right-short(width="27" height="27" fill="none")
+                                            circle(cx="13.5" cy="13.5" r="13" stroke="#F61067" stroke-opacity=".5")
+                                            path(d="M17.791 13.854a.5.5 0 000-.708L14.61 9.964a.5.5 0 10-.707" +
+                                            ".708L16.73 13.5l-2.828 2.828a.5.5 0 10.707.707l3.182-3.181zM9.562 14h7" +
+                                            ".876v-1H9.563v1z" fill="#F61067")
         .subscribe
             .container
                 .row

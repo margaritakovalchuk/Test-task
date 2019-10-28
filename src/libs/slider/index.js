@@ -3,15 +3,21 @@ const Slider = ({ slider, sliderItems, sliderBgs, sliderControls, animationTime 
         $slideItems = document.querySelectorAll(sliderItems),
         $slideBGs = document.querySelectorAll(sliderBgs),
         $controls = document.querySelectorAll(sliderControls),
-        $controlLeft = document.querySelectorAll(`${sliderControls}.left`),
-        $controlRight = document.querySelectorAll(`${sliderControls}.right`),
+        $controlLeft = document.querySelectorAll(`${sliderControls} .left`),
+        $controlRight = document.querySelectorAll(`${sliderControls} .right`),
         diff = 0,
         curSlide = 0,
         numOfSlides = $slideItems.length - 1,
+        counter = document.querySelector('.pager .counter'),
+        totalCounter = document.querySelector('.pager .counter .total'),
         animating = false,
         animTime = animationTime,
         autoSlideTimeout,
         autoSlideDelay = slideDelay;
+
+    totalCounter.innerText = $slideItems.length;
+
+    console.log($controlLeft);
 
     function manageControls() {
         $controls.forEach(element => {

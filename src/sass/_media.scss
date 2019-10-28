@@ -73,6 +73,10 @@
     margin-right: 0;
   }
 
+  .main-nav span{
+    text-align: right;
+  }
+
   .subheader {
     .arrow-right {
       margin-right: 0;
@@ -145,19 +149,21 @@
   }
 
   .intro .intro-content {
-    margin-bottom: 0;
+    margin-bottom: 45px;
   }
 
-  .intro .intro-img-block .article--img {
+  .intro .intro-img-block .img-thumb {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
+    overflow: hidden;
+    margin: 0 auto -55px;
+  }
+
+  .intro .intro-img-block .article--img {
     position: relative;
     z-index: 4;
-    left: calc(50% - 70px);
-    bottom: -60px;
+    width: 100%;
   }
 
   .intro .intro-img-block {
@@ -238,4 +244,3 @@
     margin-bottom: 16px;
   }
 }
-
