@@ -304,13 +304,8 @@ ul {
   }
 }
 
-.wrapper,
-.features-wrapper {
+.wrapper {
   width: 50%;
-}
-
-.features-wrapper {
-  margin-right: 128px;
 }
 
 .subheading {
@@ -355,15 +350,10 @@ ul {
   background-color: $main-color;
   background-size: cover;
   background-repeat: no-repeat;
-  //width: 100%;
   height: 1008px;
   z-index: 1;
-  //max-height: 100%;
 }
 
-.features-wrapper {
-  z-index: 2;
-}
 
 .subscribe {
   padding: 26px 0 40px;
@@ -510,13 +500,29 @@ a:hover .socials path {
   fill: $complementary-color;
 }
 
-.features-test {
+.features {
   position: relative;
   padding-top: 90px;
   padding-bottom: 90px;
 }
 
-.bg-container-test {
+.features-subheading {
+  @include text("Mplus1p-ExtraBold", 12px, 6px, $complementary-color, uppercase, 18px, 1.5);
+}
+
+.features-heading {
+  @include text("Mplus1p-Medium", 45px, 0, $main-text-color, none, 24px, 1.5);
+}
+
+.features-lead {
+  @include text("Mplus1p-ExtraBold", 18px, 0, $main-text-color, none, 36px, 1.6);
+}
+
+.features-text-content {
+  @include text("Mplus1p-Regular", 16px, 0, $main-text-color, none, 53px, 1.6);
+}
+
+.bg-container {
   background-image: url(../img/bg-features.png), linear-gradient(to bottom, rgba(49, 18, 81, 0) 0, #31124e 80%);
   background-color: #30124e;
   background-size: cover;
@@ -529,13 +535,9 @@ a:hover .socials path {
   z-index: 1;
 }
 
-.features-test-wrapper {
+.features-wrapper {
   z-index: 2;
   position: relative;
-
-  p {
-    color: #fff;
-  }
 
   .app-link {
     writing-mode: vertical-lr;
@@ -570,12 +572,34 @@ a:hover .socials path {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #fff;
   height: 100%;
   overflow: hidden;
   z-index: 100;
   display: none;
+  background-color: $main-color;
 }
+
+.mobile-menu {
+  li {
+    border-bottom: 1px solid #1b1e21;
+    font-size: 20px;
+  }
+
+  span {
+    padding: 20px 20px;
+    display: block;
+  }
+
+  a {
+    color: $main-text-color;
+  }
+
+  li > a > span:hover {
+    background-color: #1b1e21;
+    transition: 0.4s ease-in-out;
+  }
+}
+
 
 .overlay {
   background-color: rgba(0, 0, 0, .7);

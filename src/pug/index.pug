@@ -38,7 +38,7 @@ block content
             .reverse-container.subheader.pr-md-2
                 .d-flex.align-items-center
                     p.content-subheader Velit laoreet id donec ultrices. Ut lectus arcu bibendum varius.
-                    svg.arrow-right(width="48" height="48" fill="none")
+                    svg.arrow-right(width="48" height="48" fill="none" viewBox="0 0 50 50")
                         circle(cx="24" cy="24" r="24" fill="#C4C4C4" fill-opacity=".05")
                         circle(cx="24" cy="24" r="23.5" stroke="#fff" stroke-opacity=".5")
                         path(d="M31.354 24.354a.5.5 0 000-.708l-3.182-3.181a.5.5 0 10-.707.707L30.293 " +
@@ -62,17 +62,17 @@ block content
                     .blockquote--block
                         p Commodo sed egestas egestas fringilla phasellus faucibus.
 
-        article.features-test
-            .bg-container-test
-            .features-test-wrapper
+        article.features
+            .bg-container
+            .features-wrapper
                 .container
-                    p.subheading Benefits
+                    p.features-subheading Benefits
                     .row
                         .col-md-5
-                            p.heading.intro-heading Shaping the future
-                            p.lead.intro-lead Eget nunc scelerisque viverra mauris in aliquam. Dignissim sodales ut
+                            p.heading.features-heading Shaping the future
+                            p.lead.features-lead Eget nunc scelerisque viverra mauris in aliquam. Dignissim sodales ut
                                 | eu sem integer vitae. Libero nunc consequat interdum varius.
-                            p.text-content Magna sit amet purus gravida. Sit amet porttitor eget dolor morbi non.
+                            p.text-content.features-text-content Magna sit amet purus gravida. Sit amet porttitor eget dolor morbi non.
                                 | Lectus vestibulum mattis ullamcorper velit sed ullamcorper.
                                 | Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. Dui faucibus
                                 | in ornare quam viverra.
@@ -102,20 +102,25 @@ block content
                                             path(d="M17.791 13.854a.5.5 0 000-.708L14.61 9.964a.5.5 0 10-.707" +
                                             ".708L16.73 13.5l-2.828 2.828a.5.5 0 10.707.707l3.182-3.181zM9.562 14h7" +
                                             ".876v-1H9.563v1z" fill="#F61067")
-        .subscribe
+
+        .subscribe.test
             .container
-                .row
-                    .col-md-12.text-center.p-md-0
-                        p.subscribe--title Subscribe to our newsletter
-                        p.subscribe--subtitle Cras pulvinar mattis nunc sed blandit.
-                    .col-xl-6.m-auto.col-lg-8
-                        .form-inline.subscribe-form
-                            label.sr-only Enter your email
-                            input.flex-grow-1(type="email" placeholder="Enter email")
-                            button.button-subscribe(type="submit") Subscribe
-                                svg.arrow-right-short(width="27" height="27" fill="none")
-                                    circle(cx="13.5" cy="13.5" r="13" stroke="#F61067" stroke-opacity=".5")
-                                    path(d="M17.791 13.854a.5.5 0 000-.708L14.61 9.964a.5.5 0 10-.707" +
-                                    ".708L16.73 13.5l-2.828 2.828a.5.5 0 10.707.707l3.182-3.181zM9.562 14h7" +
-                                    ".876v-1H9.563v1z" fill="#F61067")
+                form
+                    .row
+                        legend.col-md-12.text-center.p-md-0
+                            p.subscribe--title Subscribe to our newsletter
+                            p.subscribe--subtitle Cras pulvinar mattis nunc sed blandit.
+                        .col-xl-6.m-auto.col-lg-8
+                            .form-inline.subscribe-form
+                                label.sr-only(for="email") Enter your email
+                                .input-group.w-100
+                                    input#email.flex-grow-1(type="email" placeholder="Enter email")
+                                    .input-group-append
+                                        button.button-subscribe(type="submit")
+                                            span Subscribe
+                                            svg.arrow-right-short(width="27" height="27" fill="none")
+                                                circle(cx="13.5" cy="13.5" r="13" stroke="#F61067" stroke-opacity=".5")
+                                                path(d="M17.791 13.854a.5.5 0 000-.708L14.61 9.964a.5.5 0 10-.707" +
+                                                ".708L16.73 13.5l-2.828 2.828a.5.5 0 10.707.707l3.182-3.181zM9.562 14h7" +
+                                                ".876v-1H9.563v1z" fill="#F61067")
 

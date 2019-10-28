@@ -14,6 +14,10 @@
 }
 
 @media (max-width: 991px) {
+  .main-nav span .active {
+      color: $main-text-color;
+  }
+
   .main--phone svg {
     margin-right: 13px;
   }
@@ -23,7 +27,7 @@
   }
   .subheader {
     .arrow-right {
-      margin-right: 20px;
+      margin-right: 35px;
     }
   }
 
@@ -73,14 +77,16 @@
     margin-right: 0;
   }
 
-  .main-nav span{
-    text-align: right;
+  .mobile-menu li {
+
+    span.active {
+      cursor: default;
+      color: #4e555b;
+    }
   }
 
   .subheader {
-    .arrow-right {
-      margin-right: 0;
-    }
+    margin-right: 15px;
   }
 
   .content--title {
@@ -227,9 +233,25 @@
   }
 }
 
+@media (max-width: 509px) {
+  .subscribe.test {
+    .button-subscribe {
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
 @media (max-width: 479px) {
   .subscribe--title {
     font-size: 25px;
+  }
+
+  .subscribe.test {
+    input[type="email"] {
+      margin-bottom: 0;
+    }
   }
 
   input[type="email"] {
@@ -242,5 +264,18 @@
 
   .footer-list:first-child {
     margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 374px) {
+  .subscribe.test {
+    input[type="email"] {
+      font-size: 16px;
+    }
+
+    .button-subscribe {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
   }
 }
