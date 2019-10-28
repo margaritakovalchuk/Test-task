@@ -15,7 +15,7 @@
 
 @media (max-width: 991px) {
   .main-nav span .active {
-      color: $main-text-color;
+    color: $main-text-color;
   }
 
   .main--phone svg {
@@ -124,6 +124,26 @@
 
   .intro-img-block {
     width: 100%;
+  }
+
+  .features-content {
+    margin-bottom: 70px;
+  }
+
+  .features-subheading {
+    @include text("Mplus1p-ExtraBold", 12px, 6px, $complementary-color, uppercase, 15px, 1.5);
+  }
+
+  .features-heading {
+    @include text("Mplus1p-Medium", 45px, 0, $complementary-text-color, none, 20px, 1);
+  }
+
+  .features-lead {
+    @include text("Mplus1p-ExtraBold", 18px, 0, $complementary-text-color, none, 25px, 1.6);
+  }
+
+  .features-text-content {
+    @include text("Mplus1p-Regular", 16px, 0, $text-content, none, 30px, 1.6);
   }
 
   .subscribe--title {
