@@ -13,6 +13,12 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .features {
+    margin-top: -110px;
+  }
+}
+
 @media (max-width: 991px) {
   .main-nav span .active {
     color: $main-text-color;
@@ -128,6 +134,10 @@
     width: 100%;
   }
 
+  .features {
+    margin-bottom: 0;
+  }
+
   .features-content {
     margin-bottom: 70px;
   }
@@ -145,7 +155,7 @@
   }
 
   .features--text-content {
-    @include text("Mplus1p-Regular", 16px, 0, $text-content, none, 30px, 1.6);
+    @include text("Mplus1p-Regular", 16px, 0, $text-content, none, 15px, 1.6);
   }
 
   .subscribe--title {
@@ -253,14 +263,12 @@
 }
 
 @media (max-width: 509px) {
-
   .button-subscribe {
     span {
       display: none;
     }
   }
 }
-
 
 @media (max-width: 479px) {
   .subscribe--title {
@@ -281,7 +289,6 @@
 }
 
 @media (max-width: 374px) {
-
   input[type="email"] {
     font-size: 16px;
   }

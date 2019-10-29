@@ -1,11 +1,6 @@
 @include font-face('Mplus1p-Medium', '#{$font-path}/Mplus1p-Medium', 500);
-@include font-face('Noticia Text', '#{$font-path}/NoticiaText-BoldItalic', bold, italic);
 @include font-face('Mplus1p-Regular', '#{$font-path}/Mplus1p-Regular');
 @include font-face('Mplus1p-Bold', '#{$font-path}/Mplus1p-Bold', bold);
-@include font-face('Mplus1p-Thin', '#{$font-path}/Mplus1p-Thin', 100);
 @include font-face('NoticiaText-Italic', '#{$font-path}/NoticiaText-Italic', normal, italic);
 @include font-face('Mplus1p-ExtraBold', '#{$font-path}/Mplus1p-ExtraBold', 800);
-@include font-face('NoticiaText-Bold', '#{$font-path}/NoticiaText-Bold', bold);
 @include font-face('Mplus1p-Black', '#{$font-path}/Mplus1p-Black', 900);
-@include font-face('Mplus1p-Light', '#{$font-path}/Mplus1p-Light', 300);
-@include font-face('NoticiaText-Regular', '#{$font-path}/NoticiaText-Regular');

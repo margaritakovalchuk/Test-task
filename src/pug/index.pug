@@ -57,7 +57,7 @@ block content
                     a.button-main(href="#") Learn more
                 .intro-img--block.reverse-container.px-md-0.offset-md-1
                     .img-thumb
-                        img.article--img(src='../img/intro-img.png')
+                        img.article--img(src='../img/intro-img.png' alt="Intro")
                     .quote
                         .blockquote--block-big.d-none.d-sm-block
                         .blockquote--block
@@ -65,6 +65,7 @@ block content
 
             article.features
                 .bg-container.d-md-block.d-none
+                    .bg-container-gradient
                 .features-wrapper
                     .container
                         p.features--subheading Benefits
@@ -74,13 +75,12 @@ block content
                                 p.lead.features--lead Eget nunc scelerisque viverra mauris in aliquam. Dignissim sodales ut
                                     | eu sem integer vitae. Libero nunc consequat interdum varius.
                                 p.text-content.features--text-content Magna sit amet purus gravida. Sit amet porttitor eget dolor morbi non.
-                                    | Lectus vestibulum mattis ullamcorper velit sed ullamcorper.
-                                    | Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. Dui faucibus
-                                    | in ornare quam viverra.
-                                    | Posuere ac ut consequat semper viverra.
+                                p.text-content.features--text-content Lectus vestibulum mattis ullamcorper velit sed ullamcorper.
+                                p.text-content.features--text-content Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. Dui faucibus in ornare quam viverra.
+                                p.text-content.features--text-content Posuere ac ut consequat semper viverra.
                                 a.button-main(href="#") Learn more
                             .col-md-5.offset-md-1.offset-0.col-sm-12
-                                img.article--img.img-fluid(src='../img/feature-img.png')
+                                img.article--img.img-fluid(src='../img/feature-img.png' alt="Feature")
                             .col-md-1.d-md-flex.d-none
                                 a(href="#" target="_blank").app-link Mobile Apps
                         .row
@@ -107,7 +107,7 @@ block content
                 .container
                     form
                         .row
-                            legend.col-md-12.text-center.p-md-0
+                            .col-md-12.text-center.p-md-0
                                 p.subscribe--title Subscribe to our newsletter
                                 p.subscribe--subtitle Cras pulvinar mattis nunc sed blandit.
                             .col-xl-6.m-auto.col-lg-8
