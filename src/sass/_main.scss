@@ -30,7 +30,7 @@ ul {
 }
 
 .screen {
-  background-image: url(../img/header-bg.png),
+  background-image: url(../img/header-bg.jpg),
   linear-gradient(90deg, #5E239D 0%, rgba(196, 196, 196, 0) 57%);
   background-size: cover;
   background-repeat: no-repeat;
@@ -359,7 +359,7 @@ ul {
 }
 
 .features--text-content:last-of-type {
-  margin-bottom: 53px;
+  margin-bottom: 30px;
 }
 
 .bg-container {
@@ -408,6 +408,7 @@ ul {
     border: 0;
     background: none;
     padding: 0;
+    cursor: pointer;
 
     &:not(:last-child) {
       margin-right: 5px;
