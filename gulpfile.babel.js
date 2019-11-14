@@ -114,6 +114,11 @@ const minimizeImages = () => {
         .pipe(gulp.dest(path.img.dist));
 };
 
+const svg = () => {
+    return gulp.src(`${path.img.src}/**/*svg`)
+        .pipe(gulp.dest(path.img.dist));
+};
+
 const clean = () => {
     return del([
         path.css.dist,
@@ -127,4 +132,4 @@ const fonts = () => {
         .pipe(gulp.dest(path.fonts.dist));
 };
 
-export default gulp.series(clean, minimizeImages, fonts, gulp.parallel(sass, js, html), sync);
+export default gulp.series(clean, minimizeImages, svg, fonts, gulp.parallel(sass, js, html), sync);
